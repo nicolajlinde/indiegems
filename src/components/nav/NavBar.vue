@@ -1,11 +1,32 @@
 <template>
   <nav>
-    <div class="nav-logo">
-      <h1>Logo</h1>
+    <div>
+      <router-link to="/">
+        <!-- <img src="@/assets/logo.png" alt="logo" class="logo-img" /> -->
+        Indiegems
+      </router-link>
     </div>
-    <ul class="nav-menu">
-      <li><router-link to="/">Home</router-link></li>
-      <li><router-link to="/about">About</router-link></li>
+    <ul>
+      <li><router-link to="/games">Games</router-link></li>
+      <li><router-link to="/reviews">Reviews</router-link></li>
+      <li><router-link to="/development">Development</router-link></li>
+      <li>
+        <router-link to="#"
+          ><font-awesome-icon icon="fa-solid fa-magnifying-glass"
+        /></router-link>
+      </li>
+      <li>
+        <router-link to="#"
+          ><font-awesome-icon icon="fa-solid fa-user"
+        /></router-link>
+      </li>
+      <li class="socials">
+        <!-- <span class="socials-items">Socials:</span> -->
+        <router-link to="#">
+          <font-awesome-icon icon="fa-brands fa-github" />
+          <font-awesome-icon icon="fa-brands fa-discord" />
+        </router-link>
+      </li>
     </ul>
   </nav>
 </template>
@@ -17,21 +38,57 @@ nav {
   width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
-  padding: 10px 25px;
+  align-items: center;
+  height: 100%;
 }
 
-.nav-logo {
+ul li a:hover {
+  font-weight: bold;
 }
 
-.nav-menu {
+.router-link-exact-active {
+  text-decoration: underline;
 }
 
-.nav-menu li {
+ul {
+  margin: 15px 20px;
+}
+
+li {
   list-style: none;
   display: inline;
-  margin: 5px;
-  padding: 10px 15px;
+  margin: 0 5px;
+  padding: 15px 20px;
+}
+
+li a {
+  color: black;
+  text-decoration: none;
+}
+
+.fa-github,
+.fa-discord {
+  margin: 0 0.5rem;
+}
+
+.fa-github,
+.fa-discord,
+.socials {
+  color: rgb(224, 224, 224);
+}
+
+.socials {
+  padding: 15px 10px;
+  background: rgb(137, 35, 232);
+  background: linear-gradient(
+    90deg,
+    rgba(137, 35, 232, 1) 0%,
+    rgba(80, 0, 156, 1) 100%
+  );
+}
+
+.social-items {
+  padding: 0 5px;
 }
 </style>
