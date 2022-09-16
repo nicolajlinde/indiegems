@@ -1,7 +1,7 @@
 import { createStore } from "vuex";
-import getters from "@/store/getters";
-import mutations from "@/store/mutations";
-import actions from "@/store/actions";
+import getters from "@/store/games/getters";
+import mutations from "@/store/games/mutations";
+import actions from "@/store/games/actions";
 
 export default createStore({
   modules: {},
