@@ -1,7 +1,7 @@
 <template>
   <nav>
     <div>
-      <router-link to="/">
+      <router-link to="/" class="nav-logo">
         <!-- <img src="@/assets/logo.png" alt="logo" class="logo-img" /> -->
         Indiegems
       </router-link>
@@ -48,11 +48,12 @@ ul li a:hover {
 }
 
 .router-link-exact-active {
-  text-decoration: underline;
+  font-weight: bold;
 }
 
 ul {
-  margin: 15px 20px;
+  margin: 15px 0;
+  padding: 0;
 }
 
 li {
@@ -62,7 +63,16 @@ li {
   padding: 15px 20px;
 }
 
+li:last-child {
+  margin-right: 0;
+}
+
 li a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-logo {
   color: black;
   text-decoration: none;
 }
