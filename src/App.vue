@@ -4,7 +4,7 @@
   </section>
 
   <!-- Only show on Home Page -->
-  <cover-header v-if="ifRouteIsHome"></cover-header>
+  <feed-content v-if="ifRouteIsHome"></feed-content>
 
   <div id="content">
     <router-view />
@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import NavBar from "@/components/nav/NavBar.vue";
-import CoverHeader from "@/components/feed/CoverHeader.vue";
+import FeedContent from "@/components/feed/FeedContent.vue";
 import { computed } from "@vue/runtime-core";
 import { useRoute } from "vue-router";
 
