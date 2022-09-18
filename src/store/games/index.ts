@@ -12,6 +12,7 @@ export const gamesModule = {
         developers: ['Blizzard Entertainment'],
         genre: ['Shit', 'Game'],
         release_dates: ['1/1/2010'],
+        cover_image: 'cover.jpg',
         score: 33 
       }
     ]
